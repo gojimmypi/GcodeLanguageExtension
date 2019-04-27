@@ -121,6 +121,34 @@ namespace GcodeLanguage
             _GcodeTypes[GcodeTokenTypes.Gcode_9] = typeService.GetClassificationType("9");
 
             _GcodeTypes[GcodeTokenTypes.Comment] = typeService.GetClassificationType("Comment");
+
+            // o-codes
+
+            // Operators (in order of precedence from highest to lowest)
+            // ** 
+            // * / MOD
+            // + -
+            // EQ NE GT GE LT LE
+            // AND OR XOR
+
+            // Functions
+            // ATAN
+            // ABS
+            // ACOS
+            // ASIN
+            // COS
+            // EXP
+            // FIX
+            // FUP
+            // ROUND
+            // LN
+            // SIN
+            // SQRT
+            // TAN
+            // EXISTS
+
+            // keywords
+            // if else endif sub endsub call 
         }
 
         public event EventHandler<SnapshotSpanEventArgs> TagsChanged
