@@ -956,4 +956,27 @@ namespace GcodeLanguage
     }
     #endregion
 
+    #region ocode Comment
+    /// <summary>
+    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// </summary>
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = "ocode")]
+    [Name("ocode")]
+    //this should be visible to the end user
+    [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
+    //set the priority to be after the default classifiers
+    [Order(Before = Priority.Default)]
+    internal sealed class ocode : ClassificationFormatDefinition
+    {
+        /// <summary>
+        /// Defines the visual format for the gcode 9  classification type
+        /// </summary>
+        public ocode()
+        {
+            DisplayName = "Gcode - ocode"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
+            ForegroundColor = Colors.DarkOrange;
+        }
+    }
+    #endregion
 }

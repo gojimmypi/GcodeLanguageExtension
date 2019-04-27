@@ -120,8 +120,11 @@ namespace GcodeLanguage
             _GcodeTypes[GcodeTokenTypes.Gcode_8] = typeService.GetClassificationType("8");
             _GcodeTypes[GcodeTokenTypes.Gcode_9] = typeService.GetClassificationType("9");
 
-            _GcodeTypes[GcodeTokenTypes.Comment] = typeService.GetClassificationType("Comment");
+            _GcodeTypes[GcodeTokenTypes.comment] = typeService.GetClassificationType("comment");
 
+            _GcodeTypes[GcodeTokenTypes.ocode] = typeService.GetClassificationType("ocode");
+
+            // if  typeService.GetClassificationType returns Null, check GcodeClassifierClassificationDefinition
             // o-codes
 
             // Operators (in order of precedence from highest to lowest)

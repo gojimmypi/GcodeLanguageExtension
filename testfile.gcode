@@ -10,4 +10,8 @@ A21X21 d; as asd  s
 G10 this is txt(but this is a comment!)G1 X12 G1 () G1 
 A12
 B12
-o12
+o12 goto 20
+	G10
+o13
+
+

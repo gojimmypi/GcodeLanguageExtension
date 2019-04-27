@@ -319,11 +319,18 @@ namespace GcodeLanguage
 
 
         /// <summary>
-        /// Defines the Gcode_10 classification type.
+        /// Defines the Comment classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
         [Name("Comment")]
         internal static ClassificationTypeDefinition Gcode_Comment = null;
+
+        /// <summary>
+        /// Defines the ocode classification type.
+        /// </summary>
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name("ocode")]
+        internal static ClassificationTypeDefinition Gcode_ocode = null;
 
 
 

@@ -95,6 +95,7 @@ namespace GcodeLanguage
             _GcodeTypes["Z"] = GcodeTokenTypes.Gcode_Z;
 
             _GcodeTypes["minus"] = GcodeTokenTypes.Gcode_minus;
+
             _GcodeTypes["0"] = GcodeTokenTypes.Gcode_0;
             _GcodeTypes["1"] = GcodeTokenTypes.Gcode_1;
             _GcodeTypes["2"] = GcodeTokenTypes.Gcode_2;
@@ -106,7 +107,9 @@ namespace GcodeLanguage
             _GcodeTypes["8"] = GcodeTokenTypes.Gcode_8;
             _GcodeTypes["9"] = GcodeTokenTypes.Gcode_9;
 
-            _GcodeTypes[";"] = GcodeTokenTypes.Comment;
+            _GcodeTypes["comment"] = GcodeTokenTypes.comment;
+
+            _GcodeTypes["ocode"] = GcodeTokenTypes.ocode; // not to be confused with capital O
 
         }
 
@@ -127,38 +130,43 @@ namespace GcodeLanguage
                 int curLoc = containingLine.Start.Position;
                 string tokenLine = containingLine.GetText();
 
-                    // by the time we get here, we might have a tag with adjacent comments:
-                    //     G01(isthisacomment)X21
-                    GcodeHelper GcodeHelper = new GcodeHelper(tokenLine);
-                    foreach (GcodeHelper.GcodeItem Item in GcodeHelper.GcodeItems)
-                    {
-                        var tokenSpan = new SnapshotSpan(curSpan.Snapshot, new Span(curLoc, Item.ItemText.Length));
+                // by the time we get here, we might have a tag with adjacent comments:
+                //     G01(isthisacomment)X21
+                GcodeHelper GcodeHelper = new GcodeHelper(tokenLine);
+                foreach (GcodeHelper.GcodeItem Item in GcodeHelper.GcodeItems)
+                {
+                    var tokenSpan = new SnapshotSpan(curSpan.Snapshot, new Span(curLoc, Item.ItemText.Length));
 
-                        // is this item a comment? If so, color as appropriate
-                        if (Item.ItemType == GcodeTokenTypes.Comment)
+                    // is this item a comment? If so, color as appropriate
+                    if (Item.ItemType == GcodeTokenTypes.comment)
+                    {
+                        if (tokenSpan.IntersectsWith(curSpan))
+                            yield return new TagSpan<GcodeTokenTag>(tokenSpan,
+                                                                  new GcodeTokenTag(_GcodeTypes["comment"]));
+                    }
+                    else if (Item.ItemType == GcodeTokenTypes.ocode)
+                    {
+                        if (tokenSpan.IntersectsWith(curSpan))
+                            yield return new TagSpan<GcodeTokenTag>(tokenSpan,
+                                                                  new GcodeTokenTag(_GcodeTypes["ocode"]));
+                    }
+                    // otherwise check to see if it is a keyword
+                    else
+                    {
+                        if (_GcodeTypes.ContainsKey(Item.ItemText.Substring(0, 1)))
                         {
                             if (tokenSpan.IntersectsWith(curSpan))
                                 yield return new TagSpan<GcodeTokenTag>(tokenSpan,
-                                                                      new GcodeTokenTag(_GcodeTypes[";"]));
+                                                                      new GcodeTokenTag(_GcodeTypes[Item.ItemText.Substring(0, 1)]));
                         }
-
-                        // otherwise check to see if it is a keyword
                         else
                         {
-                            if (_GcodeTypes.ContainsKey(Item.ItemText.Substring(0,1)))
-                            {
-                                if (tokenSpan.IntersectsWith(curSpan))
-                                    yield return new TagSpan<GcodeTokenTag>(tokenSpan,
-                                                                          new GcodeTokenTag(_GcodeTypes[Item.ItemText.Substring(0, 1)]));
-                            }
-                            else
-                            {
-                                // no tag colorization
-                            }
+                            // no tag colorization
                         }
-                        curLoc += Item.ItemText.Length;
-
                     }
+                    curLoc += Item.ItemText.Length;
+
+                }
 
             }
 
