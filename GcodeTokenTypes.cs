@@ -9,7 +9,7 @@ namespace GcodeLanguage
     public enum GcodeTokenTypes
     {
         Undefined,
-        Comment,
+        comment,
         Gcode_A,
         Gcode_B,
         Gcode_C,
@@ -24,7 +24,7 @@ namespace GcodeLanguage
         Gcode_L,
         Gcode_M,
         Gcode_N,
-        Gcode_O,
+        Gcode_O, // Program name, not to be confused with o codes.
         Gcode_P,
         Gcode_Q,
         Gcode_R,
@@ -47,6 +47,8 @@ namespace GcodeLanguage
         Gcode_7,
         Gcode_8,
         Gcode_9,
-        Gcode_10
+        Gcode_10,
+        
+        ocode // an "o-code, different from O
     }
 }

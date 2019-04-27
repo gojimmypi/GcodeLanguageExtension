@@ -32,6 +32,7 @@ namespace GcodeLanguage
             thisLine = item;
             GcodeItems = new List<GcodeItem>();
             bool FoundType = false;
+            bool FoundAnyCode = false;
             bool CommentActive = false; // true when whe are in a parenthesis-delimmited comment "(like this)"
             GcodeTokenTypes thisBlockType = GcodeTokenTypes.Undefined;
             string thisBlock = "";
@@ -39,6 +40,7 @@ namespace GcodeLanguage
             {
             
                 string thisChar = thisLine.Substring(i, 1);
+                string nextChar =(i < this.thisLine.Length - 1)? thisLine.Substring(i + 1, 1) : "";
 
                 // if a semicolon is encountered, the rest of the line is a comment
                 if (thisChar == ";")
@@ -50,7 +52,21 @@ namespace GcodeLanguage
                         thisBlock = "";
                     }
                     thisBlock = thisLine.Substring(i);
-                    GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.Comment));
+                    GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.comment));
+                    thisBlock = "";
+                    break;
+                }
+
+                if (thisChar == "o" && !FoundAnyCode)
+                {
+                    if (thisBlock != "")
+                    {
+                        // if we have a prior block of text with a different highlight type, add it to the list before moving on
+                        GcodeItems.Add(new GcodeItem(thisBlock, thisBlockType));
+                        thisBlock = "";
+                    }
+                    thisBlock = thisLine.Substring(i);
+                    GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.ocode)); // little o's are "o-codes"
                     thisBlock = "";
                     break;
                 }
@@ -73,7 +89,7 @@ namespace GcodeLanguage
                     thisBlock += thisChar;
                     if (CommentActive)
                     {
-                        GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.Comment));
+                        GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.comment));
                         thisBlock = "";
                     }
                     CommentActive = false;
@@ -98,6 +114,7 @@ namespace GcodeLanguage
                     Enum.TryParse(thisTargetTypeName, out thisTokenType);
                     if (thisTokenType != GcodeTokenTypes.Undefined)
                     {
+                        FoundAnyCode = true;
                         if (!FoundType)
                         {
                             if (thisBlock != "")
