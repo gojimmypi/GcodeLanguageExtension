@@ -34,7 +34,6 @@ namespace GcodeLanguage
     using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Text.Tagging;
     using Microsoft.VisualStudio.Utilities;
-    using GcodeHelperNamespace;
 
     [Export(typeof(ITaggerProvider))]
     [ContentType("gcode")]
@@ -106,8 +105,6 @@ namespace GcodeLanguage
             _GcodeTypes["7"] = GcodeTokenTypes.Gcode_7;
             _GcodeTypes["8"] = GcodeTokenTypes.Gcode_8;
             _GcodeTypes["9"] = GcodeTokenTypes.Gcode_9;
-            _GcodeTypes["10"] = GcodeTokenTypes.Gcode_10;
-
 
             _GcodeTypes[";"] = GcodeTokenTypes.Comment;
 
@@ -128,21 +125,17 @@ namespace GcodeLanguage
             {
                 ITextSnapshotLine containingLine = curSpan.Start.GetContainingLine();
                 int curLoc = containingLine.Start.Position;
-                string[] tokens = containingLine.GetText().Split(separator: new char[] { ' ', '\t', '[', ';' },
-                                                                 options: StringSplitOptions.None);
+                string tokenLine = containingLine.GetText();
 
-                Boolean IsContinuedLineComment = false; // comments with ";" are only effective forthe current line
-                foreach (string GcodeToken in tokens) // this group of tokens in in a single line
-                {
                     // by the time we get here, we might have a tag with adjacent comments:
                     //     G01(isthisacomment)X21
-                    GcodeHelper GcodeHelper = new GcodeHelper(GcodeToken);
+                    GcodeHelper GcodeHelper = new GcodeHelper(tokenLine);
                     foreach (GcodeHelper.GcodeItem Item in GcodeHelper.GcodeItems)
                     {
                         var tokenSpan = new SnapshotSpan(curSpan.Snapshot, new Span(curLoc, Item.ItemText.Length));
 
                         // is this item a comment? If so, color as appropriate
-                        if (Item.IsComment)
+                        if (Item.ItemType == GcodeTokenTypes.Comment)
                         {
                             if (tokenSpan.IntersectsWith(curSpan))
                                 yield return new TagSpan<GcodeTokenTag>(tokenSpan,
@@ -152,11 +145,11 @@ namespace GcodeLanguage
                         // otherwise check to see if it is a keyword
                         else
                         {
-                            if (_GcodeTypes.ContainsKey(Item.ItemText))
+                            if (_GcodeTypes.ContainsKey(Item.ItemText.Substring(0,1)))
                             {
                                 if (tokenSpan.IntersectsWith(curSpan))
                                     yield return new TagSpan<GcodeTokenTag>(tokenSpan,
-                                                                          new GcodeTokenTag(_GcodeTypes[Item.ItemText]));
+                                                                          new GcodeTokenTag(_GcodeTypes[Item.ItemText.Substring(0, 1)]));
                             }
                             else
                             {
@@ -167,9 +160,6 @@ namespace GcodeLanguage
 
                     }
 
-                    //add an extra char location because of the tag delimiters:  ' ', '\t', '[', ';'
-                    curLoc += +1;
-                }
             }
 
         }
