@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="GcodeLanguage.6ddca5a3-c796-4e0b-bdf6-0a920e408f33" Version="1.0" Language="en-US" Publisher="gojimmypi" />
+        <Identity Id="GcodeLanguage.6ddca5a3-c796-4e0b-bdf6-0a920e408f33" Version="0.1" Language="en-US" Publisher="gojimmypi" />
         <DisplayName>GcodeLanguage</DisplayName>
         <Description xml:space="preserve">Empty VSIX Project.</Description>
     </Metadata>
