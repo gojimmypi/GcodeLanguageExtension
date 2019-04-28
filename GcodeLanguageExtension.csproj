@@ -60,7 +60,6 @@
   <ItemGroup>
     <None Include="CODE_OF_CONDUCT.md" />
     <Content Include="Gcode-syntax-highlighting-icon.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <Content Include="LICENSE.md">
