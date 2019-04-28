@@ -26,7 +26,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_A classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("A")]
+        [Name("Gcode_A")]
         internal static ClassificationTypeDefinition Gcode_A = null;
 
 
@@ -34,7 +34,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_B classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("B")]
+        [Name("Gcode_B")]
         internal static ClassificationTypeDefinition Gcode_B = null;
 
 
@@ -42,7 +42,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_C classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("C")]
+        [Name("Gcode_C")]
         internal static ClassificationTypeDefinition Gcode_C = null;
 
 
@@ -50,7 +50,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_D classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("D")]
+        [Name("Gcode_D")]
         internal static ClassificationTypeDefinition Gcode_D = null;
 
 
@@ -58,7 +58,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_E classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("E")]
+        [Name("Gcode_E")]
         internal static ClassificationTypeDefinition Gcode_E = null;
 
 
@@ -66,7 +66,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_F classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("F")]
+        [Name("Gcode_F")]
         internal static ClassificationTypeDefinition Gcode_F = null;
 
 
@@ -74,7 +74,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_G classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("G")]
+        [Name("Gcode_G")]
         internal static ClassificationTypeDefinition Gcode_G = null;
 
 
@@ -82,7 +82,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_H classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("H")]
+        [Name("Gcode_H")]
         internal static ClassificationTypeDefinition Gcode_H = null;
 
 
@@ -90,7 +90,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_I classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("I")]
+        [Name("Gcode_I")]
         internal static ClassificationTypeDefinition Gcode_I = null;
 
 
@@ -98,7 +98,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_J classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("J")]
+        [Name("Gcode_J")]
         internal static ClassificationTypeDefinition Gcode_J = null;
 
 
@@ -106,7 +106,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_K classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("K")]
+        [Name("Gcode_K")]
         internal static ClassificationTypeDefinition Gcode_K = null;
 
 
@@ -114,7 +114,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_L classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("L")]
+        [Name("Gcode_L")]
         internal static ClassificationTypeDefinition Gcode_L = null;
 
 
@@ -122,7 +122,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_M classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("M")]
+        [Name("Gcode_M")]
         internal static ClassificationTypeDefinition Gcode_M = null;
 
 
@@ -130,7 +130,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_N classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("N")]
+        [Name("Gcode_N")]
         internal static ClassificationTypeDefinition Gcode_N = null;
 
 
@@ -138,7 +138,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_O classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("O")]
+        [Name("Gcode_O")]
         internal static ClassificationTypeDefinition Gcode_O = null;
 
 
@@ -146,7 +146,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_P classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("P")]
+        [Name("Gcode_P")]
         internal static ClassificationTypeDefinition Gcode_P = null;
 
 
@@ -154,7 +154,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_Q classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("Q")]
+        [Name("Gcode_Q")]
         internal static ClassificationTypeDefinition Gcode_Q = null;
 
 
@@ -162,7 +162,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_R classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("R")]
+        [Name("Gcode_R")]
         internal static ClassificationTypeDefinition Gcode_R = null;
 
 
@@ -170,7 +170,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_S classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("S")]
+        [Name("Gcode_S")]
         internal static ClassificationTypeDefinition Gcode_S = null;
 
 
@@ -178,7 +178,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_T classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("T")]
+        [Name("Gcode_T")]
         internal static ClassificationTypeDefinition Gcode_T = null;
 
 
@@ -186,7 +186,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_U classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("U")]
+        [Name("Gcode_U")]
         internal static ClassificationTypeDefinition Gcode_U = null;
 
 
@@ -194,7 +194,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_V classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("V")]
+        [Name("Gcode_V")]
         internal static ClassificationTypeDefinition Gcode_V = null;
 
 
@@ -202,7 +202,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_W classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("W")]
+        [Name("Gcode_W")]
         internal static ClassificationTypeDefinition Gcode_W = null;
 
 
@@ -210,7 +210,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_X classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("X")]
+        [Name("Gcode_X")]
         internal static ClassificationTypeDefinition Gcode_X = null;
 
 
@@ -218,7 +218,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_Y classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("Y")]
+        [Name("Gcode_Y")]
         internal static ClassificationTypeDefinition Gcode_Y = null;
 
 
@@ -226,7 +226,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_Z classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("Z")]
+        [Name("Gcode_Z")]
         internal static ClassificationTypeDefinition Gcode_Z = null;
 
 
@@ -234,7 +234,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_minus classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("minus")]
+        [Name("Gcode_minus")]
         internal static ClassificationTypeDefinition Gcode_minus = null;
 
 
@@ -242,7 +242,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_0 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("0")]
+        [Name("Gcode_0")]
         internal static ClassificationTypeDefinition Gcode_0 = null;
 
 
@@ -250,7 +250,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_1 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("1")]
+        [Name("Gcode_1")]
         internal static ClassificationTypeDefinition Gcode_1 = null;
 
 
@@ -258,7 +258,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_2 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("2")]
+        [Name("Gcode_2")]
         internal static ClassificationTypeDefinition Gcode_2 = null;
 
 
@@ -266,7 +266,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_3 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("3")]
+        [Name("Gcode_3")]
         internal static ClassificationTypeDefinition Gcode_3 = null;
 
 
@@ -274,7 +274,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_4 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("4")]
+        [Name("Gcode_4")]
         internal static ClassificationTypeDefinition Gcode_4 = null;
 
 
@@ -282,7 +282,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_5 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("5")]
+        [Name("Gcode_5")]
         internal static ClassificationTypeDefinition Gcode_5 = null;
 
 
@@ -290,7 +290,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_6 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("6")]
+        [Name("Gcode_6")]
         internal static ClassificationTypeDefinition Gcode_6 = null;
 
 
@@ -298,7 +298,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_7 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("7")]
+        [Name("Gcode_7")]
         internal static ClassificationTypeDefinition Gcode_7 = null;
 
 
@@ -306,7 +306,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_8 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("8")]
+        [Name("Gcode_8")]
         internal static ClassificationTypeDefinition Gcode_8 = null;
 
 
@@ -314,7 +314,7 @@ namespace GcodeLanguage
         /// Defines the Gcode_9 classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name("9")]
+        [Name("Gcode_9")]
         internal static ClassificationTypeDefinition Gcode_9 = null;
 
 
@@ -332,7 +332,12 @@ namespace GcodeLanguage
         [Name("ocode")]
         internal static ClassificationTypeDefinition Gcode_ocode = null;
 
-
+        /// <summary>
+        /// Defines the numbers classification type.
+        /// </summary>
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name("numbers")]
+        internal static ClassificationTypeDefinition Gcode_numbers = null;
 
     }
 
