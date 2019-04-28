@@ -3,7 +3,7 @@
     <Metadata>
         <Identity Id="GcodeLanguage.33e4d37e-ee58-43c4-8e52-b8c1b054dde1" Version="1.0" Language="en-US" Publisher="gojimmypi" />
         <DisplayName>GcodeLanguage</DisplayName>
-        <Description xml:space="preserve">Empty VSIX Project.</Description>
+        <Description xml:space="preserve">Sample classifier extension to the Visual Studio Editor. Implements the G-Code Language Extension</Description>
         <License>LICENSE.md</License>
     </Metadata>
     <Installation>
