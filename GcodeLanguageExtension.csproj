@@ -59,7 +59,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="CODE_OF_CONDUCT.md" />
-    <None Include="LICENSE.md" />
+    <Content Include="LICENSE.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="packages.config" />
     <None Include="README.md" />
     <None Include="source.extension.vsixmanifest">
