@@ -132,7 +132,10 @@ namespace GcodeLanguage
                             thisTokenType = GcodeTokenTypes.Undefined;
                             break;
                         default:
-                            if (!FoundType && (nextChar.All(char.IsNumber) || (nextChar == "-")))
+                            // check to see if we are searching for a keyword type. Numbers and dashes are included.
+                            if (!FoundType && 
+                                (nextChar != "") &&  // apparently C# thinks an empty string is a number :/
+                                (nextChar.All(char.IsNumber) || (nextChar == "-")))
                             {
                                 thisTokenType = GcodeTokenTypes.Undefined;
                                 if (CaseSensitivity)
