@@ -58,6 +58,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="CODE_OF_CONDUCT.md" />
+    <None Include="LICENSE.md" />
     <None Include="packages.config" />
     <None Include="README.md" />
     <None Include="source.extension.vsixmanifest">
