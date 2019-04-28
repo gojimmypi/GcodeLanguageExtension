@@ -48,7 +48,7 @@ namespace GcodeLanguage
         Gcode_8,
         Gcode_9,
         Gcode_10,
-        
+        numbers,
         ocode // an "o-code, different from O
     }
 }
