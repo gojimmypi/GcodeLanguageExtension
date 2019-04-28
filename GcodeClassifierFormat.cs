@@ -176,7 +176,7 @@ namespace GcodeLanguage
         public Gcode_G()
         {
             DisplayName = "Gcode - G"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Yellow;
+            ForegroundColor = Colors.Coral;
         }
     }
     #endregion
@@ -326,7 +326,7 @@ namespace GcodeLanguage
         public Gcode_M()
         {
             DisplayName = "Gcode - M"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Yellow;
+            ForegroundColor = Colors.Coral;
         }
     }
     #endregion
@@ -601,7 +601,8 @@ namespace GcodeLanguage
         public Gcode_X()
         {
             DisplayName = "Gcode - X"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Red;
+            ForegroundColor = Colors.Tomato;
+            BackgroundColor = Colors.MidnightBlue;
         }
     }
     #endregion
@@ -626,7 +627,8 @@ namespace GcodeLanguage
         public Gcode_Y()
         {
             DisplayName = "Gcode - Y"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Green;
+            ForegroundColor = Colors.LawnGreen;
+            BackgroundColor = Colors.MidnightBlue;
         }
     }
     #endregion
@@ -651,7 +653,8 @@ namespace GcodeLanguage
         public Gcode_Z()
         {
             DisplayName = "Gcode - Z"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Blue;
+            ForegroundColor = Colors.Cyan;
+            BackgroundColor = Colors.MidnightBlue;
         }
     }
     #endregion
