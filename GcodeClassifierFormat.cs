@@ -13,7 +13,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_A")]
-    [Name("Gcode_A")]
+    [Name("CTN_Gcode_A")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -38,7 +38,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_B")]
-    [Name("Gcode_B")]
+    [Name("CTN_Gcode_B")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -63,7 +63,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_C")]
-    [Name("Gcode_C")]
+    [Name("CTN_Gcode_C")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -88,7 +88,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_D")]
-    [Name("Gcode_D")]
+    [Name("CTN_Gcode_D")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -113,7 +113,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_E")]
-    [Name("Gcode_E")]
+    [Name("CTN_Gcode_E")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -138,7 +138,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_F")]
-    [Name("Gcode_F")]
+    [Name("CTN_Gcode_F")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -163,7 +163,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_G")]
-    [Name("Gcode_G")]
+    [Name("CTN_Gcode_G")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -188,7 +188,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_H")]
-    [Name("Gcode_H")]
+    [Name("CTN_Gcode_H")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -213,7 +213,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_I")]
-    [Name("Gcode_I")]
+    [Name("CTN_Gcode_I")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -238,7 +238,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_J")]
-    [Name("Gcode_J")]
+    [Name("CTN_Gcode_J")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -263,7 +263,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_K")]
-    [Name("Gcode_K")]
+    [Name("CTN_Gcode_K")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -288,7 +288,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_L")]
-    [Name("Gcode_L")]
+    [Name("CTN_Gcode_L")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -313,7 +313,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_M")]
-    [Name("Gcode_M")]
+    [Name("CTN_Gcode_M")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -338,7 +338,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_N")]
-    [Name("Gcode_N")]
+    [Name("CTN_Gcode_N")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -363,7 +363,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_O")]
-    [Name("Gcode_O")]
+    [Name("CTN_Gcode_O")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -388,7 +388,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_P")]
-    [Name("Gcode_P")]
+    [Name("CTN_Gcode_P")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -413,7 +413,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Q")]
-    [Name("Gcode_Q")]
+    [Name("CTN_Gcode_Q")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -438,7 +438,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_R")]
-    [Name("Gcode_R")]
+    [Name("CTN_Gcode_R")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -463,7 +463,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_S")]
-    [Name("Gcode_S")]
+    [Name("CTN_Gcode_S")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -488,7 +488,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_T")]
-    [Name("Gcode_T")]
+    [Name("CTN_Gcode_T")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -513,7 +513,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_U")]
-    [Name("Gcode_U")]
+    [Name("CTN_Gcode_U")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -538,7 +538,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_V")]
-    [Name("Gcode_V")]
+    [Name("CTN_Gcode_V")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -563,7 +563,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_W")]
-    [Name("Gcode_W")]
+    [Name("CTN_Gcode_W")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -588,7 +588,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_X")]
-    [Name("Gcode_X")]
+    [Name("CTN_Gcode_X")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -614,7 +614,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Y")]
-    [Name("Gcode_Y")]
+    [Name("CTN_Gcode_Y")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -640,7 +640,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Z")]
-    [Name("Gcode_Z")]
+    [Name("CTN_Gcode_Z")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -666,7 +666,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_minus")]
-    [Name("Gcode_minus")]
+    [Name("CTN_Gcode_minus")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -691,7 +691,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_0")]
-    [Name("Gcode_0")]
+    [Name("CTN_Gcode_0")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -716,7 +716,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_1")]
-    [Name("Gcode_1")]
+    [Name("CTN_Gcode_1")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -741,7 +741,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_2")]
-    [Name("Gcode_2")]
+    [Name("CTN_Gcode_2")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -766,7 +766,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_3")]
-    [Name("Gcode_3")]
+    [Name("CTN_Gcode_3")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -791,7 +791,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_4")]
-    [Name("Gcode_4")]
+    [Name("CTN_Gcode_4")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -816,7 +816,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_5")]
-    [Name("Gcode_5")]
+    [Name("CTN_Gcode_5")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -841,7 +841,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_6")]
-    [Name("Gcode_6")]
+    [Name("CTN_Gcode_6")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -866,7 +866,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_7")]
-    [Name("Gcode_7")]
+    [Name("CTN_Gcode_7")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -891,7 +891,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_8")]
-    [Name("Gcode_8")]
+    [Name("CTN_Gcode_8")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -916,7 +916,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_9")]
-    [Name("Gcode_9")]
+    [Name("CTN_Gcode_9")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -941,7 +941,7 @@ namespace GcodeLanguage
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "gComment")]
-    [Name("gComment")]
+    [Name("g_Comment")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -964,8 +964,8 @@ namespace GcodeLanguage
     /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = "ocode")]
-    [Name("ocode")]
+    [ClassificationType(ClassificationTypeNames = "g_ocode")]
+    [Name("g_ocode")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
