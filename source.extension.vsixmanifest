@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="GcodeLanguage.33e4d37e-ee58-43c4-8e52-b8c1b054dde1" Version="1.0" Language="en-US" Publisher="gojimmypi" />
-        <DisplayName>GcodeLanguage</DisplayName>
+        <Identity Id="GcodeLanguage Extension.277E5C0E-0571-44D4-A9BA-B569963C9F3D" Version="0.1" Language="en-US" Publisher="gojimmypi" />
+        <DisplayName>Gcode Language Extension</DisplayName>
         <Description xml:space="preserve">Sample classifier extension to the Visual Studio Editor. Implements the G-Code Language Extension</Description>
+        <MoreInfo>https://github.com/gojimmypi/GcodeLanguageExtension</MoreInfo>
         <License>LICENSE.md</License>
+        <Icon>Gcode-syntax-highlighting-icon.jpg</Icon>
+        <Tags>gcode syntax highlighting cnc 3dprinter g-code g.code</Tags>
     </Metadata>
     <Installation>
         <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0, 17.0)" />
