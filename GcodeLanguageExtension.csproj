@@ -16,8 +16,8 @@
     <ProjectGuid>{2C7CCBB6-D8A1-4530-9ACA-7B38F64CC68F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GcodeLanguage</RootNamespace>
-    <AssemblyName>GcodeLanguage</AssemblyName>
+    <RootNamespace>GcodeLanguageExtension</RootNamespace>
+    <AssemblyName>GcodeLanguageExtension</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <GeneratePkgDefFile>false</GeneratePkgDefFile>
     <IncludeAssemblyInVSIXContainer>true</IncludeAssemblyInVSIXContainer>
