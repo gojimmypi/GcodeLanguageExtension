@@ -38,9 +38,16 @@ There seems to be a disagreement between various sources as to whether G-Code is
 or lower case without changing the meaning of a line."
 
 ## Resources
+* [Microsoft - Walkthrough: Publish a Visual Studio extension](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension?view=vs-2019)
+* [Microsoft - Walkthrough: Displaying Statement Completion](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-displaying-statement-completion)
+
+* [C# Color Table](http://flounder.com/csharp_color_table.htm)
 * [The NIST RS274NGC Interpreter - Version 3](https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=823374)
 * [wikipedia - G-Codes](https://en.wikipedia.org/wiki/G-code)
-* [linuxcnc G-Code Quick Reference](http://linuxcnc.org/docs/html/gcode.html)
+* [linuxcnc - G-Code Quick Reference](http://linuxcnc.org/docs/html/gcode.html)
 * [linuxcnc - M-Codes](http://linuxcnc.org/docs/html/gcode/m-code.html#mcode:m2-m30)
 * [linuxcnc - G-Codes](http://linuxcnc.org/docs/html/gcode/overview.html)
 * [linuxcnc - O-Codes](http://linuxcnc.org/docs/html/gcode/o-code.html)
+
+## Other Stuff
+* [Adding limit swtiches](http://blog.shahada.abubakar.net/post/adding-end-stops-limit-switches-to-the-3018-woodpecker-cnc-router)
