@@ -81,6 +81,9 @@ namespace GcodeLanguage
             _buffer = buffer;
             _aggregator = GcodeTagAggregator;
             _GcodeTypes = new Dictionary<GcodeTokenTypes, IClassificationType>();
+
+            _GcodeTypes[GcodeTokenTypes.Gcode_Undefined] = typeService.GetClassificationType("Gcode_Undefined");
+
             _GcodeTypes[GcodeTokenTypes.Gcode_A] = typeService.GetClassificationType("Gcode_A");
             _GcodeTypes[GcodeTokenTypes.Gcode_B] = typeService.GetClassificationType("Gcode_B");
             _GcodeTypes[GcodeTokenTypes.Gcode_C] = typeService.GetClassificationType("Gcode_C");
@@ -120,9 +123,9 @@ namespace GcodeLanguage
             _GcodeTypes[GcodeTokenTypes.Gcode_8] = typeService.GetClassificationType("Gcode_8");
             _GcodeTypes[GcodeTokenTypes.Gcode_9] = typeService.GetClassificationType("Gcode_9");
 
-            _GcodeTypes[GcodeTokenTypes.comment] = typeService.GetClassificationType("comment");
-
-            _GcodeTypes[GcodeTokenTypes.ocode] = typeService.GetClassificationType("ocode");
+            _GcodeTypes[GcodeTokenTypes.Gcode_Comment] = typeService.GetClassificationType("Gcode_Comment");
+            
+            _GcodeTypes[GcodeTokenTypes.Gcode_ocode] = typeService.GetClassificationType("ocode");
 
             // if  typeService.GetClassificationType returns Null, check GcodeClassifierClassificationDefinition
             // o-codes
@@ -168,10 +171,24 @@ namespace GcodeLanguage
             foreach (var tagSpan in _aggregator.GetTags(spans))
             {
                 var tagSpans = tagSpan.Span.GetSpans(spans[0].Snapshot);
-                // each of the text values found for tagSpan.Tag.type must be defined above in GcodeClassifier
-                yield return
-                    new TagSpan<ClassificationTag>(tagSpans[0],
-                                                   new ClassificationTag(_GcodeTypes[tagSpan.Tag.type]));
+                // each of the text values found for tagSpan.Tag.type must be defined above in GcodeClassifieif r
+                if (_GcodeTypes[tagSpan.Tag.type] != null)
+                {
+                    ClassificationTag thisClassificationTag = new ClassificationTag(_GcodeTypes[tagSpan.Tag.type]);
+                    if (thisClassificationTag != null)
+                    {
+                        yield return
+                            new TagSpan<ClassificationTag>(tagSpans[0], thisClassificationTag);
+                    }
+                    else
+                    {
+                        // TODO - how did we possibly end up here? it happens only in release mode??
+                    }
+                }
+                else
+                {
+                    // TODO - how did we possibly end up here? it happens only in release mode??
+                }
             }
         }
     }
