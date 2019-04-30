@@ -2,7 +2,6 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs/GcodeLanguageToCopy/v15
 /obj
 /bin/Debug
 /.vs
