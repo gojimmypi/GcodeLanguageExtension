@@ -107,9 +107,9 @@ namespace GcodeLanguage
             _GcodeTypes["Gcode_8"] = GcodeTokenTypes.Gcode_8;
             _GcodeTypes["Gcode_9"] = GcodeTokenTypes.Gcode_9;
 
-            _GcodeTypes["comment"] = GcodeTokenTypes.comment;
+            _GcodeTypes["Gcode_Comment"] = GcodeTokenTypes.Gcode_Comment;
 
-            _GcodeTypes["ocode"] = GcodeTokenTypes.ocode; // not to be confused with capital O
+            _GcodeTypes["Gcode_ocode"] = GcodeTokenTypes.Gcode_ocode; // not to be confused with capital O
 
         }
 
@@ -137,33 +137,16 @@ namespace GcodeLanguage
                 {
                     var tokenSpan = new SnapshotSpan(curSpan.Snapshot, new Span(curLoc, Item.ItemText.Length));
 
-                    // is this item a comment? If so, color as appropriate
-                    if (Item.ItemType == GcodeTokenTypes.comment)
+                    if (Item.ItemType != GcodeTokenTypes.Gcode_Undefined && tokenSpan.IntersectsWith(curSpan))
                     {
-                        if (tokenSpan.IntersectsWith(curSpan))
-                            yield return new TagSpan<GcodeTokenTag>(tokenSpan,
-                                                                  new GcodeTokenTag(_GcodeTypes["comment"]));
+                        yield return new TagSpan<GcodeTokenTag>(tokenSpan,
+                                                              new GcodeTokenTag(Item.ItemType));
                     }
-                    else if (Item.ItemType == GcodeTokenTypes.ocode)
-                    {
-                        if (tokenSpan.IntersectsWith(curSpan))
-                            yield return new TagSpan<GcodeTokenTag>(tokenSpan,
-                                                                  new GcodeTokenTag(_GcodeTypes["ocode"]));
-                    }
-                    // otherwise check to see if it is a keyword
                     else
                     {
-                        if (_GcodeTypes.ContainsKey(Item.ItemType.ToString()))
-                        {
-                            if (tokenSpan.IntersectsWith(curSpan))
-                                yield return new TagSpan<GcodeTokenTag>(tokenSpan,
-                                                                      new GcodeTokenTag(Item.ItemType));
-                        }
-                        else
-                        {
-                            // no tag colorization
-                        }
+                        // no tag colorization
                     }
+
                     curLoc += Item.ItemText.Length;
 
                 }
