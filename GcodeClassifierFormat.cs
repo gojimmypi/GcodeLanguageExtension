@@ -6,6 +6,29 @@ using Microsoft.VisualStudio.Utilities;
 namespace GcodeLanguage
 {
 
+    #region Keyword Undefined
+    /// <summary>
+    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// </summary>
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = "Gcode_Undefined")]
+    [Name("CTN_Gcode_Undefined")]
+    //this should be visible to the end user
+    [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
+    //set the priority to be after the default classifiers
+    [Order(Before = Priority.Default)]
+    internal sealed class Gcode_Undefined : ClassificationFormatDefinition
+    {
+        /// <summary>
+        /// Defines the visual format for the gcode Undefined classification type
+        /// </summary>
+        public Gcode_Undefined()
+        {
+            DisplayName = "Gcode - Undefined"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
+        }
+    }
+    #endregion
+
 
     #region Keyword A 
     /// <summary>
@@ -940,8 +963,8 @@ namespace GcodeLanguage
     /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = "gComment")]
-    [Name("g_Comment")]
+    [ClassificationType(ClassificationTypeNames = "CTN_Gcode_Comment")]
+    [Name("Gcode_Comment")]
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
@@ -954,7 +977,7 @@ namespace GcodeLanguage
         public Gcode_Comment()
         {
             DisplayName = "Gcode - Comment"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Cornsilk;
+            ForegroundColor = Colors.Green;
         }
     }
     #endregion
