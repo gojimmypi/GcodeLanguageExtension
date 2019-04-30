@@ -8,8 +8,8 @@ namespace GcodeLanguage
 {
     public enum GcodeTokenTypes
     {
-        Undefined,
-        comment,
+        Gcode_Undefined,
+        Gcode_Comment,
         Gcode_A,
         Gcode_B,
         Gcode_C,
@@ -48,7 +48,7 @@ namespace GcodeLanguage
         Gcode_8,
         Gcode_9,
         Gcode_10,
-        numbers,
-        ocode // an "o-code, different from O
+        Gcode_numbers,
+        Gcode_ocode // an "o-code, different from O
     }
 }
