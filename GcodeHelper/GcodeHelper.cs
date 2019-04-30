@@ -35,12 +35,11 @@ namespace GcodeLanguage
             thisLine = item;
             GcodeItems = new List<GcodeItem>();
             bool FoundType = false;
-            bool FoundAnyCode = false;
             bool FoundNonBlank = false;
             bool CommentActive = false; // true when whe are in a parenthesis-delimmited comment "(like this)"
-            GcodeTokenTypes thisBlockType = GcodeTokenTypes.Undefined;
+            GcodeTokenTypes thisBlockType = GcodeTokenTypes.Gcode_Undefined;
             string thisBlock = "";
-            GcodeTokenTypes thisTokenType = GcodeTokenTypes.Undefined;
+            GcodeTokenTypes thisTokenType = GcodeTokenTypes.Gcode_Undefined;
             for (int i = 0; i < this.thisLine.Length; i++)
             {
                 string priorChar = (i > 0)? thisLine.Substring(i - 1, 1) : "";
@@ -54,7 +53,6 @@ namespace GcodeLanguage
                 // if a semicolon is encountered, the rest of the line is a comment
                 if (thisChar == ";")
                 {
-                    FoundAnyCode = true;
                     if (thisBlock != "")
                     {
                         // if we have a prior block of text with a different highlight type, add it to the list before moving on
@@ -62,7 +60,7 @@ namespace GcodeLanguage
                         thisBlock = "";
                     }
                     thisBlock = thisLine.Substring(i);
-                    GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.comment));
+                    GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.Gcode_Comment));
                     thisBlock = "";
                     break;
                 }
@@ -77,7 +75,7 @@ namespace GcodeLanguage
                         thisBlock = "";
                     }
                     thisBlock = thisLine.Substring(i);
-                    GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.ocode)); // little o's are "o-codes"
+                    GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.Gcode_ocode)); // little o's are "o-codes"
                     thisBlock = "";
                     break;
                 }
@@ -86,7 +84,6 @@ namespace GcodeLanguage
                 string thisTargetTypeName;
                 if (thisChar == "(")
                 {
-                    FoundAnyCode = true;
                     if (thisBlock != "" && !CommentActive)
                     {
                         // if we have a prior block of text with a different highlight type, add it to the list before moving on
@@ -101,7 +98,7 @@ namespace GcodeLanguage
                     thisBlock += thisChar;
                     if (CommentActive)
                     {
-                        GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.comment));
+                        GcodeItems.Add(new GcodeItem(thisBlock, GcodeTokenTypes.Gcode_Comment));
                         thisBlock = "";
                     }
                     CommentActive = false;
@@ -129,7 +126,7 @@ namespace GcodeLanguage
 //                            thisTokenType = GcodeTokenTypes.numbers;
                             break;
                         case " ":
-                            thisTokenType = GcodeTokenTypes.Undefined;
+                            thisTokenType = GcodeTokenTypes.Gcode_Undefined;
                             break;
                         default:
                             // check to see if we are searching for a keyword type. Numbers and dashes are included.
@@ -137,7 +134,7 @@ namespace GcodeLanguage
                                 (nextChar != "") &&  // apparently C# thinks an empty string is a number :/
                                 (nextChar.All(char.IsNumber) || (nextChar == "-")))
                             {
-                                thisTokenType = GcodeTokenTypes.Undefined;
+                                thisTokenType = GcodeTokenTypes.Gcode_Undefined;
                                 if (CaseSensitivity)
                                 {
                                     thisTargetTypeName = "Gcode_" + thisChar;
@@ -151,9 +148,8 @@ namespace GcodeLanguage
                             break;
                     }
                     // Get an enum item by string name (e.g. Gcode_A, Gcode_B, etc)
-                    if (thisTokenType != GcodeTokenTypes.Undefined)
+                    if (thisTokenType != GcodeTokenTypes.Gcode_Undefined)
                     {
-                        FoundAnyCode = true;
                         if (!FoundType)
                         {
                             if (thisBlock != "")
@@ -174,7 +170,7 @@ namespace GcodeLanguage
                             GcodeItems.Add(new GcodeItem(thisBlock, thisBlockType));
                             thisBlock = "";
                         }
-                        thisBlockType = GcodeTokenTypes.Undefined;
+                        thisBlockType = GcodeTokenTypes.Gcode_Undefined;
                         FoundType = false;
                     }
                     thisBlock += thisChar;
