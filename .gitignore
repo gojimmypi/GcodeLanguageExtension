@@ -7,3 +7,7 @@
 /.vs
 /packages
 /bin/Release
+/Gcode15/Gcode15/bin/Debug
+/Gcode15/Gcode15/obj/Debug
+/Gcode15/packages
+/Gcode15/.vs/Gcode15
