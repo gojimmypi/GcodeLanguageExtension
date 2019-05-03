@@ -46,6 +46,8 @@ or lower case without changing the meaning of a line."
 * [Microsoft - Visual Studio Extensibility: Creating Visual Studio VSIX package extension](https://social.technet.microsoft.com/wiki/contents/articles/37071.visual-studio-extensibility-creating-visual-studio-vsix-package-extension.aspx)
 * [Microsoft - Walkthrough: Publish a Visual Studio extension](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension?view=vs-2019)
 * [Microsoft - Walkthrough: Displaying Statement Completion](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-displaying-statement-completion)
+* [Microsoft - Colors and Styling for Visual Studio](https://docs.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/colors-and-styling-for-visual-studio?view=vs-2019)
+* [Microsoft - Walkthrough: Customize the text view](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-customizing-the-text-view?view=vs-2019)
 
 * [Extensibility tools written by Mads Kristensen](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityTools)
 * [GitHub - Extensibility Tools for Visual Studio](https://github.com/madskristensen/ExtensibilityTools)
