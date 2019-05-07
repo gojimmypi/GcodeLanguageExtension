@@ -17,6 +17,12 @@ msbuild GcodeLanguage.csproj
 "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VSIXInstaller.exe"  C:\workspace\GcodeLanguageExtension\bin\Release\GcodeLanguage.vsix
 ```
 
+For VS 2015:
+
+```
+"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\VSIXInstaller.exe"  C:\workspace\GcodeLanguageExtension\bin\Release\GcodeLanguage.vsix
+```
+
 ## Removal
 
 ```
@@ -29,6 +35,11 @@ Open the project and press `F5` to launch an experimental versional of Visual St
 
 ## Modifications
 
+## Tips
+
+Ensure the `CopyLocal` is set to `false` for all project references.
+
+
 TODO
 
 ## Case Sensitivity
@@ -38,9 +49,17 @@ There seems to be a disagreement between various sources as to whether G-Code is
 or lower case without changing the meaning of a line."
 
 ## Resources
+* [Microsoft - Visual Studio Extensibility: Creating Visual Studio VSIX package extension](https://social.technet.microsoft.com/wiki/contents/articles/37071.visual-studio-extensibility-creating-visual-studio-vsix-package-extension.aspx)
 * [Microsoft - Walkthrough: Publish a Visual Studio extension](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-publishing-a-visual-studio-extension?view=vs-2019)
 * [Microsoft - Walkthrough: Displaying Statement Completion](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-displaying-statement-completion)
+* [Microsoft - Colors and Styling for Visual Studio](https://docs.microsoft.com/en-us/visualstudio/extensibility/ux-guidelines/colors-and-styling-for-visual-studio?view=vs-2019)
 
+Looking at:
+* [Microsoft - Walkthrough: Customize the text view](https://docs.microsoft.com/en-us/visualstudio/extensibility/walkthrough-customizing-the-text-view?view=vs-2019)
+* [VSIX: How to get Colors in an Editor Extension](https://social.msdn.microsoft.com/Forums/vstudio/en-US/19a2c13d-86ac-4713-9897-88cc585201f1/vsix-how-to-get-colors-in-an-editor-extension?forum=vsx)
+
+* [Extensibility tools written by Mads Kristensen](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.ExtensibilityTools)
+* [GitHub - Extensibility Tools for Visual Studio](https://github.com/madskristensen/ExtensibilityTools)
 * [C# Color Table](http://flounder.com/csharp_color_table.htm)
 * [The NIST RS274NGC Interpreter - Version 3](https://ws680.nist.gov/publication/get_pdf.cfm?pub_id=823374)
 * [wikipedia - G-Codes](https://en.wikipedia.org/wiki/G-code)

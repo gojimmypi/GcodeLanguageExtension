@@ -125,7 +125,7 @@ namespace GcodeLanguage
 
             _GcodeTypes[GcodeTokenTypes.Gcode_Comment] = typeService.GetClassificationType("Gcode_Comment");
             
-            _GcodeTypes[GcodeTokenTypes.Gcode_ocode] = typeService.GetClassificationType("ocode");
+            _GcodeTypes[GcodeTokenTypes.Gcode_ocode] = typeService.GetClassificationType("Gcode_ocode");
 
             // if  typeService.GetClassificationType returns Null, check GcodeClassifierClassificationDefinition
             // o-codes
