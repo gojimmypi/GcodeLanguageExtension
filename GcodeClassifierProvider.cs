@@ -55,7 +55,7 @@ namespace GcodeLanguage
         internal static ContentTypeDefinition GcodeContentType = null;
 
         [Export]
-        [FileExtension(".gcode")]
+        [FileExtension(".gcode;.nc;.mpt;.mpf")] // semi-colon delimited file extensions
         [ContentType("Gcode")]
         [BaseDefinition("code")]
         [BaseDefinition("projection")]
