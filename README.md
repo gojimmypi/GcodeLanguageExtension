@@ -1,5 +1,7 @@
 ﻿# G-Code Language Extension
 
+![GcodeLanguageExtension.png](./images/GcodeLanguageExtension.png)
+
 ## Installation - Visual Studio Market Place
 
 https://marketplace.visualstudio.com/items?itemName=gojimmypi.gojimmypi-gcode-language-extension
@@ -38,6 +40,17 @@ Open the project and press `F5` to launch an experimental versional of Visual St
 ## Tips
 
 Ensure the `CopyLocal` is set to `false` for all project references.
+
+# Notes
+
+[ – minimum version inclusive.
+
+] – maximum version inclusive. 
+
+( – minimum version exclusive. 
+
+) – maximum version exclusive.
+
 
 
 TODO
