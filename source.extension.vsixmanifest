@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="GcodeLanguage Extension.63CEA96E-E88D-4966-ACAA-BF97CDDC31E4" Version="0.1.4.0" Language="en-US" Publisher="gojimmypi" />
+        <Identity Id="GcodeLanguage Extension.63CEA96E-E88D-4966-ACAA-BF97CDDC31E4" Version="0.1.5.0" Language="en-US" Publisher="gojimmypi" />
         <DisplayName>Gcode Language Extension</DisplayName>
         <Description xml:space="preserve">G-Code highlighting extension to the Visual Studio Editor. </Description>
         <MoreInfo>https://github.com/gojimmypi/GcodeLanguageExtension</MoreInfo>
