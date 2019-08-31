@@ -72,18 +72,9 @@
     <Compile Include="GcodeTokenTag.cs" />
     <Compile Include="GcodeTokenTypes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Content Include="testfiles\textfile.txt" />
-=======
-    <None Include="app.config" />
->>>>>>> Stashed changes
     <None Include="CODE_OF_CONDUCT.md" />
     <Content Include="Gcode-syntax-highlighting-icon.jpg">
       <IncludeInVSIX>true</IncludeInVSIX>
@@ -93,10 +84,6 @@
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
     <None Include="README.md" />
     <None Include="release\README.md" />
     <None Include="source.extension.vsixmanifest">
@@ -104,19 +91,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< Updated upstream
     <Reference Include="Microsoft.Build.Framework" />
-=======
-    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="envdte80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
-    <Reference Include="extensibility, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </Reference>
->>>>>>> Stashed changes
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.CoreUtility, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.VisualStudio.CoreUtility.14.3.25407\lib\net45\Microsoft.VisualStudio.CoreUtility.dll</HintPath>
@@ -212,13 +187,8 @@
     <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
-<<<<<<< Updated upstream
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
-=======
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xaml" />
->>>>>>> Stashed changes
     <Reference Include="System.Xml" />
     <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
