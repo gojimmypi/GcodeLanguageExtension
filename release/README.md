@@ -1,6 +1,9 @@
 ﻿# Release History
 Edit releawse in Project Properties - Assembly Information and source.extension.vsixmanifest Version.
 
+## Version 0.1.5
+  not distributed, testing VS2015 issues
+
 ## Version 0.1.4
 
 Addressed [#2](https://github.com/gojimmypi/GcodeLanguageExtension/issues/2) to highlight syntax for
