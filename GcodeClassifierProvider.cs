@@ -55,11 +55,32 @@ namespace GcodeLanguage
         internal static ContentTypeDefinition GcodeContentType = null;
 
         [Export]
-        [FileExtension(".gcode;.nc;.mpt;.mpf")] // semi-colon delimited file extensions
+        [FileExtension(".gcode")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
         [ContentType("Gcode")]
         [BaseDefinition("code")]
         [BaseDefinition("projection")]
         internal static FileExtensionToContentTypeDefinition GcodeFileType = null;
+
+        [Export]
+        [FileExtension(".mpf")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
+        [ContentType("Gcode")]
+        [BaseDefinition("code")]
+        [BaseDefinition("projection")]
+        internal static FileExtensionToContentTypeDefinition GcodeFileTypeMPF = null;
+
+        [Export]
+        [FileExtension(".mpt")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
+        [ContentType("Gcode")]
+        [BaseDefinition("code")]
+        [BaseDefinition("projection")]
+        internal static FileExtensionToContentTypeDefinition GcodeFileTypeMPT = null;
+
+        [Export]
+        [FileExtension(".nc")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
+        [ContentType("Gcode")]
+        [BaseDefinition("code")]
+        [BaseDefinition("projection")]
+        internal static FileExtensionToContentTypeDefinition GcodeFileTypeNC = null;
 
         [Import]
         internal IClassificationTypeRegistryService ClassificationTypeRegistry = null;
