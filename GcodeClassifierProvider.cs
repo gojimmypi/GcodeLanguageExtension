@@ -82,6 +82,13 @@ namespace GcodeLanguage
         [BaseDefinition("projection")]
         internal static FileExtensionToContentTypeDefinition GcodeFileTypeNC = null;
 
+        [Export]
+        [FileExtension(".tgc")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
+        [ContentType("Gcode")]
+        [BaseDefinition("code")]
+        [BaseDefinition("projection")]
+        internal static FileExtensionToContentTypeDefinition GcodeFileTypeTGC = null;
+
         [Import]
         internal IClassificationTypeRegistryService ClassificationTypeRegistry = null;
 

@@ -174,7 +174,8 @@ namespace GcodeLanguage
         public Gcode_F()
         {
             DisplayName = "Gcode - F"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.BlueViolet;
+            //ForegroundColor = Colors.DarkGoldenrod;
+            ForegroundColor = Color.FromRgb(192, 64, 128);
         }
     }
     #endregion
@@ -199,7 +200,9 @@ namespace GcodeLanguage
         public Gcode_G()
         {
             DisplayName = "Gcode - G"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Coral;
+            //ForegroundColor = Colors.Blue;
+            ForegroundColor = Color.FromRgb(0, 0, 255);
+
         }
     }
     #endregion
@@ -249,7 +252,8 @@ namespace GcodeLanguage
         public Gcode_I()
         {
             DisplayName = "Gcode - I"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.BlueViolet;
+            //ForegroundColor = Colors.Chocolate;
+            ForegroundColor = Color.FromRgb(192, 0, 0);
         }
     }
     #endregion
@@ -274,7 +278,8 @@ namespace GcodeLanguage
         public Gcode_J()
         {
             DisplayName = "Gcode - J"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.BlueViolet;
+            //ForegroundColor = Colors.RosyBrown;
+            ForegroundColor = Color.FromRgb(192, 0, 128);
         }
     }
     #endregion
@@ -299,7 +304,8 @@ namespace GcodeLanguage
         public Gcode_K()
         {
             DisplayName = "Gcode - K"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.BlueViolet;
+            //ForegroundColor = Colors.CornflowerBlue;
+            ForegroundColor = Color.FromRgb(192, 128, 0);
         }
     }
     #endregion
@@ -349,7 +355,8 @@ namespace GcodeLanguage
         public Gcode_M()
         {
             DisplayName = "Gcode - M"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Coral;
+            //ForegroundColor = Colors.DarkBlue;
+            ForegroundColor = Color.FromRgb(0, 64, 255);
         }
     }
     #endregion
@@ -474,7 +481,8 @@ namespace GcodeLanguage
         public Gcode_R()
         {
             DisplayName = "Gcode - R"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.BlueViolet;
+            //ForegroundColor = Colors.OrangeRed;
+            ForegroundColor = Color.FromRgb(255, 0, 0);
         }
     }
     #endregion
@@ -524,7 +532,8 @@ namespace GcodeLanguage
         public Gcode_T()
         {
             DisplayName = "Gcode - T"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.BlueViolet;
+            //ForegroundColor = Colors.RoyalBlue;
+            ForegroundColor = Color.FromRgb(128, 64, 0);
         }
     }
     #endregion
@@ -624,8 +633,8 @@ namespace GcodeLanguage
         public Gcode_X()
         {
             DisplayName = "Gcode - X"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Tomato;
-            BackgroundColor = Colors.MidnightBlue;
+            //ForegroundColor = Colors.Brown;
+            ForegroundColor = Color.FromRgb(128, 0, 0);
         }
     }
     #endregion
@@ -650,8 +659,8 @@ namespace GcodeLanguage
         public Gcode_Y()
         {
             DisplayName = "Gcode - Y"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.LawnGreen;
-            BackgroundColor = Colors.MidnightBlue;
+            //ForegroundColor = Colors.Peru;
+            ForegroundColor = Color.FromRgb(128, 0, 128);
         }
     }
     #endregion
@@ -676,8 +685,8 @@ namespace GcodeLanguage
         public Gcode_Z()
         {
             DisplayName = "Gcode - Z"; //human readable version of the name (in Tools>Options>Environment>Fonts and Colors>Text Editor
-            ForegroundColor = Colors.Cyan;
-            BackgroundColor = Colors.MidnightBlue;
+            //ForegroundColor = Colors.DarkCyan;
+            ForegroundColor = Color.FromRgb(255, 128, 0);
         }
     }
     #endregion
