@@ -3,15 +3,12 @@ namespace GcodeLanguage
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.Composition;
     using Microsoft.VisualStudio.Text;
     using Microsoft.VisualStudio.Text.Classification;
-    using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Text.Tagging;
-    using Microsoft.VisualStudio.Utilities;
     /// <summary>
-                                               /// Classifier that classifies all text as an instance of the "GcodeClassifier" classification type.
-                                               /// </summary>
+    /// Classifier that classifies all text as an instance of the "GcodeClassifier" classification type.
+    /// </summary>
     //    internal class GcodeClassifier : IClassifier
     //    {
     //        /// <summary>
@@ -124,7 +121,7 @@ namespace GcodeLanguage
             _GcodeTypes[GcodeTokenTypes.Gcode_9] = typeService.GetClassificationType("Gcode_9");
 
             _GcodeTypes[GcodeTokenTypes.Gcode_Comment] = typeService.GetClassificationType("Gcode_Comment");
-            
+
             _GcodeTypes[GcodeTokenTypes.Gcode_ocode] = typeService.GetClassificationType("Gcode_ocode");
 
             // if  typeService.GetClassificationType returns Null, check GcodeClassifierClassificationDefinition
