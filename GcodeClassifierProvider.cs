@@ -1,12 +1,9 @@
 ﻿
 namespace GcodeLanguage
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.Composition;
     using Microsoft.VisualStudio.Text;
     using Microsoft.VisualStudio.Text.Classification;
-    using Microsoft.VisualStudio.Text.Editor;
     using Microsoft.VisualStudio.Text.Tagging;
     using Microsoft.VisualStudio.Utilities;
     //    /// <summary>
@@ -81,6 +78,13 @@ namespace GcodeLanguage
         [BaseDefinition("code")]
         [BaseDefinition("projection")]
         internal static FileExtensionToContentTypeDefinition GcodeFileTypeNC = null;
+
+        [Export]
+        [FileExtension(".tgc")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
+        [ContentType("Gcode")]
+        [BaseDefinition("code")]
+        [BaseDefinition("projection")]
+        internal static FileExtensionToContentTypeDefinition GcodeFileTypeTGC = null;
 
         [Import]
         internal IClassificationTypeRegistryService ClassificationTypeRegistry = null;

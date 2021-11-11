@@ -1,6 +1,6 @@
-﻿using System.ComponentModel.Composition;
-using Microsoft.VisualStudio.Text.Classification;
+﻿using Microsoft.VisualStudio.Text.Classification;
 using Microsoft.VisualStudio.Utilities;
+using System.ComponentModel.Composition;
 
 namespace GcodeLanguage
 {
@@ -22,7 +22,7 @@ namespace GcodeLanguage
 #pragma warning restore 169
 
         /// <summary>
-        /// Defines the Gcode_A classification type.
+        /// Defines the Gcode_Undefined classification type.
         /// </summary>
         [Export(typeof(ClassificationTypeDefinition))]
         [Name("Gcode_Undefined")]
