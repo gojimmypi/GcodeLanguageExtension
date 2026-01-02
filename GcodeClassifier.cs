@@ -68,8 +68,10 @@ namespace GcodeLanguage
     internal sealed class GcodeClassifier : ITagger<ClassificationTag>
     {
         ITextBuffer _buffer;
-        ITagAggregator<GcodeTokenTag> _aggregator;
-        IDictionary<GcodeTokenTypes, IClassificationType> _GcodeTypes;
+        private readonly ITagAggregator<GcodeTokenTag> _aggregator;
+        private readonly IDictionary<GcodeTokenTypes, IClassificationType> _GcodeTypes;
+
+        public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
 
         /// <summary>
         /// Construct the classifier and define search tokens
@@ -80,6 +82,8 @@ namespace GcodeLanguage
         {
             _buffer = buffer;
             _aggregator = GcodeTagAggregator;
+            _aggregator.TagsChanged += OnAggregatorTagsChanged;
+
             _GcodeTypes = new Dictionary<GcodeTokenTypes, IClassificationType>();
 
             _GcodeTypes[GcodeTokenTypes.Gcode_Undefined] = typeService.GetClassificationType("Gcode_Undefined");
@@ -157,28 +161,42 @@ namespace GcodeLanguage
             // if else endif sub endsub call
         }
 
-        public event EventHandler<SnapshotSpanEventArgs> TagsChanged
-        {
-            add { }
-            remove { }
+
+        private void OnAggregatorTagsChanged(object sender, TagsChangedEventArgs e) {
+            if (TagsChanged == null) {
+                return;
+            }
+
+            NormalizedSnapshotSpanCollection spans = e.Span.GetSpans(_buffer.CurrentSnapshot);
+            if (spans.Count == 0) {
+                return;
+            }
+
+            TagsChanged.Invoke(this, new SnapshotSpanEventArgs(spans[0]));
         }
 
         /// <summary>
         /// Search the given span for any instances of classified tags
         /// </summary>
-        public IEnumerable<ITagSpan<ClassificationTag>> GetTags(NormalizedSnapshotSpanCollection spans)
-        {
-            foreach (var tagSpan in _aggregator.GetTags(spans))
-            {
-                var tagSpans = tagSpan.Span.GetSpans(spans[0].Snapshot);
+        public IEnumerable<ITagSpan<ClassificationTag>> GetTags(NormalizedSnapshotSpanCollection spans) {
+            if (spans.Count == 0) {
+                yield break;
+            }
 
-                // each of the text values found for tagSpan.Tag.type must be defined above in GcodeClassifieif r
-                if (_GcodeTypes.TryGetValue(tagSpan.Tag.type, out IClassificationType classificationType) && classificationType != null) {
-                    yield return new TagSpan<ClassificationTag>(tagSpans[0], new ClassificationTag(classificationType));
+            foreach (var tagSpan in _aggregator.GetTags(spans)) {
+                var tagSpans = tagSpan.Span.GetSpans(spans[0].Snapshot);
+                if (tagSpans.Count == 0) {
+                    continue;
+                }
+
+                if (_GcodeTypes.TryGetValue(tagSpan.Tag.type, out IClassificationType classificationType) &&
+                    classificationType != null) {
+                    yield return new TagSpan<ClassificationTag>(
+                        tagSpans[0],
+                        new ClassificationTag(classificationType)
+                    );
                 }
             }
         }
     }
-
-
 }
