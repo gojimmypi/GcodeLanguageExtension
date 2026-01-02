@@ -1,7 +1,7 @@
 ﻿# Release History
 Edit releawse in Project Properties - Assembly Information and source.extension.vsixmanifest Version.
 
-## Version 0.1.7
+## Version 0.1.7.0
 
 Add support for VS 2022, VS 2026
 
