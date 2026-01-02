@@ -4,7 +4,7 @@
 
 /obj
 /bin/Debug
-/.vs
+/**/.vs
 /packages
 /bin/Release
 /Gcode15/Gcode15/bin/Debug

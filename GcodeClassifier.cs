@@ -68,8 +68,10 @@ namespace GcodeLanguage
     internal sealed class GcodeClassifier : ITagger<ClassificationTag>
     {
         ITextBuffer _buffer;
-        ITagAggregator<GcodeTokenTag> _aggregator;
-        IDictionary<GcodeTokenTypes, IClassificationType> _GcodeTypes;
+        private readonly ITagAggregator<GcodeTokenTag> _aggregator;
+        private readonly IDictionary<GcodeTokenTypes, IClassificationType> _GcodeTypes;
+
+        public event EventHandler<SnapshotSpanEventArgs> TagsChanged;
 
         /// <summary>
         /// Construct the classifier and define search tokens
@@ -80,6 +82,8 @@ namespace GcodeLanguage
         {
             _buffer = buffer;
             _aggregator = GcodeTagAggregator;
+            _aggregator.TagsChanged += OnAggregatorTagsChanged;
+
             _GcodeTypes = new Dictionary<GcodeTokenTypes, IClassificationType>();
 
             _GcodeTypes[GcodeTokenTypes.Gcode_Undefined] = typeService.GetClassificationType("Gcode_Undefined");
@@ -124,14 +128,14 @@ namespace GcodeLanguage
             _GcodeTypes[GcodeTokenTypes.Gcode_9] = typeService.GetClassificationType("Gcode_9");
 
             _GcodeTypes[GcodeTokenTypes.Gcode_Comment] = typeService.GetClassificationType("Gcode_Comment");
-            
+
             _GcodeTypes[GcodeTokenTypes.Gcode_ocode] = typeService.GetClassificationType("Gcode_ocode");
 
             // if  typeService.GetClassificationType returns Null, check GcodeClassifierClassificationDefinition
             // o-codes
 
             // Operators (in order of precedence from highest to lowest)
-            // ** 
+            // **
             // * / MOD
             // + -
             // EQ NE GT GE LT LE
@@ -154,44 +158,45 @@ namespace GcodeLanguage
             // EXISTS
 
             // keywords
-            // if else endif sub endsub call 
+            // if else endif sub endsub call
         }
 
-        public event EventHandler<SnapshotSpanEventArgs> TagsChanged
-        {
-            add { }
-            remove { }
+
+        private void OnAggregatorTagsChanged(object sender, TagsChangedEventArgs e) {
+            if (TagsChanged == null) {
+                return;
+            }
+
+            NormalizedSnapshotSpanCollection spans = e.Span.GetSpans(_buffer.CurrentSnapshot);
+            if (spans.Count == 0) {
+                return;
+            }
+
+            TagsChanged.Invoke(this, new SnapshotSpanEventArgs(spans[0]));
         }
 
         /// <summary>
         /// Search the given span for any instances of classified tags
         /// </summary>
-        public IEnumerable<ITagSpan<ClassificationTag>> GetTags(NormalizedSnapshotSpanCollection spans)
-        {
-            foreach (var tagSpan in _aggregator.GetTags(spans))
-            {
+        public IEnumerable<ITagSpan<ClassificationTag>> GetTags(NormalizedSnapshotSpanCollection spans) {
+            if (spans.Count == 0) {
+                yield break;
+            }
+
+            foreach (var tagSpan in _aggregator.GetTags(spans)) {
                 var tagSpans = tagSpan.Span.GetSpans(spans[0].Snapshot);
-                // each of the text values found for tagSpan.Tag.type must be defined above in GcodeClassifieif r
-                if (_GcodeTypes[tagSpan.Tag.type] != null)
-                {
-                    ClassificationTag thisClassificationTag = new ClassificationTag(_GcodeTypes[tagSpan.Tag.type]);
-                    if (thisClassificationTag != null)
-                    {
-                        yield return
-                            new TagSpan<ClassificationTag>(tagSpans[0], thisClassificationTag);
-                    }
-                    else
-                    {
-                        // TODO - how did we possibly end up here? it happens only in release mode??
-                    }
+                if (tagSpans.Count == 0) {
+                    continue;
                 }
-                else
-                {
-                    // TODO - how did we possibly end up here? it happens only in release mode??
+
+                if (_GcodeTypes.TryGetValue(tagSpan.Tag.type, out IClassificationType classificationType) &&
+                    classificationType != null) {
+                    yield return new TagSpan<ClassificationTag>(
+                        tagSpans[0],
+                        new ClassificationTag(classificationType)
+                    );
                 }
             }
         }
     }
-
-
 }

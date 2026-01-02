@@ -43,43 +43,34 @@ namespace GcodeLanguage
     //        #endregion
     //    }
     [Export(typeof(ITaggerProvider))]
-    [ContentType("Gcode")]
+    [ContentType("gcode")]
     [TagType(typeof(ClassificationTag))]
     internal sealed class GcodeClassifierProvider : ITaggerProvider
     {
 
-        [Export]
-        [Name("Gcode")]
-        [BaseDefinition("code")]
-        [BaseDefinition("projection")]
+        [Export(typeof(ContentTypeDefinition))]
+        [Name("gcode")]
+        [BaseDefinition("text")]
         internal static ContentTypeDefinition GcodeContentType = null;
 
-        [Export]
-        [FileExtension(".gcode")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
-        [ContentType("Gcode")]
-        [BaseDefinition("code")]
-        [BaseDefinition("projection")]
+        [Export(typeof(FileExtensionToContentTypeDefinition))]
+        [FileExtension(".gcode")]
+        [ContentType("gcode")]
         internal static FileExtensionToContentTypeDefinition GcodeFileType = null;
 
-        [Export]
-        [FileExtension(".mpf")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
-        [ContentType("Gcode")]
-        [BaseDefinition("code")]
-        [BaseDefinition("projection")]
+        [Export(typeof(FileExtensionToContentTypeDefinition))]
+        [FileExtension(".mpf")]
+        [ContentType("gcode")]
         internal static FileExtensionToContentTypeDefinition GcodeFileTypeMPF = null;
 
-        [Export]
-        [FileExtension(".mpt")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
-        [ContentType("Gcode")]
-        [BaseDefinition("code")]
-        [BaseDefinition("projection")]
+        [Export(typeof(FileExtensionToContentTypeDefinition))]
+        [FileExtension(".mpt")]
+        [ContentType("gcode")]
         internal static FileExtensionToContentTypeDefinition GcodeFileTypeMPT = null;
 
-        [Export]
-        [FileExtension(".nc")] // semi-colon delimited file extensions work only in VS2017/2019 - so we create multiple FileExtensionToContentTypeDefinition 
-        [ContentType("Gcode")]
-        [BaseDefinition("code")]
-        [BaseDefinition("projection")]
+        [Export(typeof(FileExtensionToContentTypeDefinition))]
+        [FileExtension(".nc")]
+        [ContentType("gcode")]
         internal static FileExtensionToContentTypeDefinition GcodeFileTypeNC = null;
 
         [Import]

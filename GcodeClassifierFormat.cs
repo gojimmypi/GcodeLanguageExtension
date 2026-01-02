@@ -8,7 +8,7 @@ namespace GcodeLanguage
 
     #region Keyword Undefined
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is NOT color, rather using default.
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Undefined")]
@@ -16,7 +16,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_Undefined : ClassificationFormatDefinition
     {
         /// <summary>
@@ -30,9 +30,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword A 
+    #region Keyword A
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_A")]
@@ -40,7 +40,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_A : ClassificationFormatDefinition
     {
         /// <summary>
@@ -55,9 +55,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword B 
+    #region Keyword B
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_B")]
@@ -65,7 +65,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_B : ClassificationFormatDefinition
     {
         /// <summary>
@@ -80,9 +80,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword C 
+    #region Keyword C
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_C")]
@@ -90,7 +90,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_C : ClassificationFormatDefinition
     {
         /// <summary>
@@ -105,9 +105,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword D 
+    #region Keyword D
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_D")]
@@ -115,7 +115,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_D : ClassificationFormatDefinition
     {
         /// <summary>
@@ -130,9 +130,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword E 
+    #region Keyword E
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_E")]
@@ -140,7 +140,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_E : ClassificationFormatDefinition
     {
         /// <summary>
@@ -155,9 +155,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword F 
+    #region Keyword F
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_F")]
@@ -165,7 +165,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_F : ClassificationFormatDefinition
     {
         /// <summary>
@@ -180,9 +180,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword G 
+    #region Keyword G
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_G")]
@@ -190,7 +190,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_G : ClassificationFormatDefinition
     {
         /// <summary>
@@ -205,9 +205,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword H 
+    #region Keyword H
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_H")]
@@ -215,7 +215,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_H : ClassificationFormatDefinition
     {
         /// <summary>
@@ -230,9 +230,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword I 
+    #region Keyword I
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_I")]
@@ -240,7 +240,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_I : ClassificationFormatDefinition
     {
         /// <summary>
@@ -255,9 +255,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword J 
+    #region Keyword J
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_J")]
@@ -265,7 +265,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_J : ClassificationFormatDefinition
     {
         /// <summary>
@@ -280,9 +280,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword K 
+    #region Keyword K
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_K")]
@@ -290,7 +290,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_K : ClassificationFormatDefinition
     {
         /// <summary>
@@ -305,9 +305,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword L 
+    #region Keyword L
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_L")]
@@ -315,7 +315,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_L : ClassificationFormatDefinition
     {
         /// <summary>
@@ -330,9 +330,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword M 
+    #region Keyword M
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_M")]
@@ -340,7 +340,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_M : ClassificationFormatDefinition
     {
         /// <summary>
@@ -355,9 +355,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword N 
+    #region Keyword N
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_N")]
@@ -365,7 +365,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_N : ClassificationFormatDefinition
     {
         /// <summary>
@@ -380,9 +380,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword O 
+    #region Keyword O
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_O")]
@@ -390,7 +390,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_O : ClassificationFormatDefinition
     {
         /// <summary>
@@ -405,9 +405,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword P 
+    #region Keyword P
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_P")]
@@ -415,7 +415,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_P : ClassificationFormatDefinition
     {
         /// <summary>
@@ -430,9 +430,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword Q 
+    #region Keyword Q
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Q")]
@@ -440,7 +440,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_Q : ClassificationFormatDefinition
     {
         /// <summary>
@@ -455,9 +455,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword R 
+    #region Keyword R
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_R")]
@@ -465,7 +465,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_R : ClassificationFormatDefinition
     {
         /// <summary>
@@ -480,9 +480,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword S 
+    #region Keyword S
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_S")]
@@ -490,7 +490,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_S : ClassificationFormatDefinition
     {
         /// <summary>
@@ -505,9 +505,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword T 
+    #region Keyword T
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_T")]
@@ -515,7 +515,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_T : ClassificationFormatDefinition
     {
         /// <summary>
@@ -530,9 +530,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword U 
+    #region Keyword U
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_U")]
@@ -540,7 +540,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_U : ClassificationFormatDefinition
     {
         /// <summary>
@@ -555,9 +555,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword V 
+    #region Keyword V
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_V")]
@@ -565,7 +565,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_V : ClassificationFormatDefinition
     {
         /// <summary>
@@ -580,9 +580,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword W 
+    #region Keyword W
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_W")]
@@ -590,7 +590,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_W : ClassificationFormatDefinition
     {
         /// <summary>
@@ -605,9 +605,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword X 
+    #region Keyword X
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_X")]
@@ -615,7 +615,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_X : ClassificationFormatDefinition
     {
         /// <summary>
@@ -631,9 +631,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword Y 
+    #region Keyword Y
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Y")]
@@ -641,7 +641,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_Y : ClassificationFormatDefinition
     {
         /// <summary>
@@ -657,9 +657,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword Z 
+    #region Keyword Z
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Z")]
@@ -667,7 +667,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_Z : ClassificationFormatDefinition
     {
         /// <summary>
@@ -683,9 +683,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword minus 
+    #region Keyword minus
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_minus")]
@@ -693,7 +693,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_minus : ClassificationFormatDefinition
     {
         /// <summary>
@@ -708,9 +708,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 0 
+    #region Keyword 0
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_0")]
@@ -718,7 +718,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_0 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -733,9 +733,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 1 
+    #region Keyword 1
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_1")]
@@ -743,7 +743,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_1 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -758,9 +758,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 2 
+    #region Keyword 2
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_2")]
@@ -768,7 +768,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_2 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -783,9 +783,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 3 
+    #region Keyword 3
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_3")]
@@ -793,7 +793,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_3 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -808,9 +808,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 4 
+    #region Keyword 4
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_4")]
@@ -818,7 +818,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_4 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -833,9 +833,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 5 
+    #region Keyword 5
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_5")]
@@ -843,7 +843,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_5 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -858,9 +858,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 6 
+    #region Keyword 6
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_6")]
@@ -868,7 +868,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_6 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -883,9 +883,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 7 
+    #region Keyword 7
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_7")]
@@ -893,7 +893,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_7 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -908,9 +908,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 8 
+    #region Keyword 8
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_8")]
@@ -918,7 +918,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_8 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -933,9 +933,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Keyword 9 
+    #region Keyword 9
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_9")]
@@ -943,7 +943,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_9 : ClassificationFormatDefinition
     {
         /// <summary>
@@ -958,9 +958,9 @@ namespace GcodeLanguage
     #endregion
 
 
-    #region Comment 
+    #region Comment
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_Comment")]
@@ -968,7 +968,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_Comment : ClassificationFormatDefinition
     {
         /// <summary>
@@ -984,7 +984,7 @@ namespace GcodeLanguage
 
     #region ocode
     /// <summary>
-    /// Defines the editor format for the Verilog_always classification type. Text is colored BlueViolet
+    /// Defines the editor format for the G-Code item name. Text is colored
     /// </summary>
     [Export(typeof(EditorFormatDefinition))]
     [ClassificationType(ClassificationTypeNames = "Gcode_ocode")]
@@ -992,7 +992,7 @@ namespace GcodeLanguage
     //this should be visible to the end user
     [UserVisible(true)] // sets this editor format definition visible for the user (in Tools>Options>Environment>Fonts and Colors>Text Editor
     //set the priority to be after the default classifiers
-    [Order(Before = Priority.Default)]
+    [Order(After = Priority.Default)]
     internal sealed class Gcode_ocode : ClassificationFormatDefinition
     {
         /// <summary>

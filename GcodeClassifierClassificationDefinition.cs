@@ -345,10 +345,5 @@ namespace GcodeLanguage
         [Name("Gcode_numbers")]
         internal static ClassificationTypeDefinition Gcode_numbers = null;
 
-    }
-
-
-
-
-
-}
+    } /* insternal internal static class GcodeClassifierClassificationDefinition */
+} /* namespace GcodeLanguage */
